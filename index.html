@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <title>Electron Control Panel</title>
+</head>
+<body class="mainbody">
+  <div class="container">
+    <div class="mainheading">
+      <img src="./assets/mirroring.png" style="height: 70px; width: 70px;">
+      <h2 class="header">BinaryB Cast</h2>
+    </div>
+    <hr>
+
+    <h2 class="innerheading">Start Casting </h2>
+    <div class="startmirroring">
+      
+      <label for="quality">Select Quality:</label>
+      <select id="quality">
+        <option value="480p">480p</option>
+        <option value="720p">720p</option>
+        <option value="1080p">1080p</option>
+      </select><br>
+
+      <div class="startmirroring">
+        <button id="startScrcpy">Start Scrcpy</button>
+        <button id="stopScrcpy">Stop Scrcpy</button>
+      </div>
+
+    </div>
+
+    <hr>
+    <div class="wifi">
+      <label for="ipAddress">Device IP Address:</label>
+      <input type="text" id="ipAddress" placeholder="Enter device IP address"><br>
+      <button id="connectWifi">Connect via Wi-Fi</button><br>
+    </div>
+    <hr>    
+
+    <h2 class="innerheading">Record Screen</h2>
+    <div class="Recording">
+      <button id="startRecording">Start Recording</button>
+      <button id="stopRecording">Stop Recording</button>
+    </div>
+
+<hr>
+    <div class="functionalities">
+      <h2 class="innerheading">Test Functionalities</h2>
+      <hr>
+      <h2 class="innerinnerheading">Call</h2>
+      <div class="number">
+        <label for="phoneNumber">Phone Number:</label>
+        <input type="text" id="phoneNumber" placeholder="Enter phone number"><br>
+        <button id="makeCall">Make Call</button><br>
+      </div>
+      <hr>
+
+      <h2 class="innerinnerheading">Song</h2>
+      <div class="song">
+        <label for="songUrl">Song URL:</label>
+        <input type="text" id="songUrl" placeholder="Enter song URL"><br>
+        <button id="playMusic">Play Music</button><br>
+      </div>
+      
+      <hr>
+      <h2 class="innerinnerheading">Navigation</h2>
+      <div class="Navigation">
+        <label for="destination">Navigation Destination:</label>
+        <input type="text" id="destination" placeholder="Enter destination"><br>
+        <button id="startNavigation">Start Navigation</button>
+      </div>
+
+    </div>
+  </div>
+  
+  <div class="footer">
+    <p>&copy; 2024 BinaryB Cast</p>
+  </div>
+
+  <script>
+    const { ipcRenderer } = require('electron');
+
+    document.getElementById('startScrcpy').addEventListener('click', () => {
+      const quality = document.getElementById('quality').value;
+      ipcRenderer.invoke('start-scrcpy', 'usb', quality); // Passing 'usb' as deviceType
+    });
+
+    document.getElementById('stopScrcpy').addEventListener('click', () => {
+      ipcRenderer.invoke('stop-scrcpy');
+    });
+
+    document.getElementById('startRecording').addEventListener('click', () => {
+      ipcRenderer.invoke('start-recording');
+    });
+
+    document.getElementById('stopRecording').addEventListener('click', () => {
+      ipcRenderer.invoke('stop-recording');
+    });
+
+    document.getElementById('makeCall').addEventListener('click', () => {
+      const phoneNumber = document.getElementById('phoneNumber').value.trim();
+      if (phoneNumber) {
+        ipcRenderer.invoke('make-call', phoneNumber);
+      } else {
+        alert('Please enter a valid phone number.');
+      }
+    });
+
+    document.getElementById('playMusic').addEventListener('click', () => {
+      const songUrl = document.getElementById('songUrl').value.trim();
+      if (songUrl) {
+        ipcRenderer.invoke('play-music', songUrl);
+      } else {
+        alert('Please enter a valid song URL.');
+      }
+    });
+
+    document.getElementById('startNavigation').addEventListener('click', () => {
+      const destination = document.getElementById('destination').value.trim();
+      if (destination) {
+        ipcRenderer.invoke('start-navigation', destination);
+      } else {
+        alert('Please enter a destination.');
+      }
+    });
+
+    document.getElementById('connectWifi').addEventListener('click', () => {
+      const ipAddress = document.getElementById('ipAddress').value.trim();
+      if (ipAddress) {
+        ipcRenderer.invoke('connect-wifi', ipAddress);
+      } else {
+        alert('Please enter a valid IP address.');
+      }
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,269 @@
+.mainheading{
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.mainbody{
+    background-color: #19232d;
+    color: white;    
+}
+
+.header{font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-align: center;
+    color: blueviolet;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    font-weight: bolder;
+    align-items: center;
+}
+
+hr{
+    padding: 0;
+    margin: 20px;
+    background-color: white ;
+}
+
+.innerheading{
+    padding-left: 20px;
+    color: white;
+
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.startmirroring{
+    padding-left: 20px;
+    padding-bottom: 20px;
+    display: flex;
+    justify-content: flex-start;
+    gap: 30px;
+}
+
+.startmirroring button{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: bold;
+    padding: 15px;
+    border-radius: 15px;
+    border-style:none;
+    border-color: grey;
+    background-color:  rgb(150, 111, 188);
+    cursor: pointer;
+}
+
+.startmirroring button:hover{
+    color: white;
+}
+
+.wifi{
+    padding-left: 20px;
+    padding-bottom: 20px;
+    display: flex;
+    justify-content: flex-start;
+    gap: 30px;
+}
+
+.wifi button{
+    padding: 15px;
+    border-radius: 15px;
+    border-style:none;
+    border-color: grey;
+    background-color:  rgb(150, 111, 188);
+    cursor: pointer;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: large;
+}
+
+.wifi button:hover{
+    color: white;
+}
+
+select#quality {
+    /* Adjust width as needed */
+    width: 100px;
+    height: 30px;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    background-color: #fff;
+    color: #333; /* Text color */
+  }
+  
+  /* Style the dropdown when hovered over */
+  select#quality:hover {
+    border-color: #999;
+    color: purple;
+  }
+  
+  /* Style the currently selected option */
+  select#quality option:checked {
+    background-color: #eee;
+  }
+
+#stopScrcpy{
+    background-color: red;
+    border-style: none;
+    color: white;
+}
+
+.Recording{
+    padding: 20px;display: flex;
+    justify-content: flex-start;
+    gap: 30px;
+}
+
+.Recording button{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: bolder;
+    font-size: medium;
+    padding: 20px;
+    border-radius: 30px;
+    border-style:none;
+    border-color: grey;
+    background-color:  rgb(150, 111, 188);
+    cursor: pointer;
+}
+
+.Recording button:hover{
+    color: white;
+}
+
+
+
+.footer{
+    color: white;
+    text-align: center;
+    padding-bottom: 0;
+    padding-top: 10px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+
+.mainbody{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+input[type="text"] {
+    width: 20%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.innerinnerheading{
+ padding-left: 20px;
+ font-size: large;
+ margin-bottom: 0;   
+
+ font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+ font-size: large;
+}
+
+.number{
+    display: flex;
+    gap: 30px;
+    padding-left: 20px;
+}
+
+.number label{
+    font-size: large;
+    margin-top: 10px;
+}
+
+.number button{
+    width:125px;
+    height: 40px;
+    margin-top: 5px;
+
+
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: bold;
+    padding: 10px;
+    border-radius: 15px;
+    border-style:none;
+    border-color: grey;
+    background-color:  rgb(150, 111, 188);
+    cursor: pointer;
+}
+
+.number button:hover{
+    color: white;
+}
+
+.song button:hover{
+    color: white;
+}
+
+.Navigation button:hover{
+    color: white;
+}
+
+.number input{
+    margin-left: 60px;
+}
+
+.song{
+    display: flex;
+    gap: 30px;
+    padding-left: 20px;
+}
+
+.song label{
+    font-size: large;
+    margin-top: 10px;
+}
+
+.song input{
+    margin-left: 90px;
+}
+
+.song button{
+    width: 125px;
+    height: 40px;
+    margin-top: 5px;
+
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: bold;
+    padding: 10px;
+    border-radius: 15px;
+    border-style:none;
+    border-color: grey;
+    background-color:  rgb(150, 111, 188);
+    cursor: pointer;
+}
+
+
+.Navigation{
+    display: flex;
+    gap: 30px;
+    padding-left: 20px;
+}
+
+.Navigation label{
+    font-size: large;
+    margin-top: 10px;
+}
+
+.Navigation input{
+    margin-left: 0;
+}
+
+.Navigation button{
+    height: 40px;
+    margin-top: 5px;
+
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: bold;
+    padding: 10px;
+    border-radius: 15px;
+    border-style:none;
+    border-color: grey;
+    background-color:  rgb(150, 111, 188);
+}
+
