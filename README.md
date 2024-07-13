@@ -1,5 +1,7 @@
 # Screen Mirroring and Control Application
 
+### Demo Link - https://youtu.be/4Ekq0yu94d0
+
 A powerful and easy-to-use screen mirroring and controlling application built with scrcpy, Electron.js, and ADB. This app allows you to mirror your Android device's screen to your computer and control it seamlessly.
 
 ## Features
@@ -31,6 +33,31 @@ A powerful and easy-to-use screen mirroring and controlling application built wi
 ### Steps
 
 1. **Clone the repository:**
-   ```sh
+```sh
    git clone https://github.com/yourusername/yourrepository.git
    cd yourrepository
+```
+2. **Install dependencies:**
+```
+npm install
+
+```
+
+
+3. **Start the application:**
+```
+npm start
+
+```
+
+4. **Package the application:**
+```
+npm run package
+
+```
+
+## Usage
+- Connect your Android device to your computer via USB.
+- Ensure that USB debugging is enabled on your Android device.
+- Launch the application using npm start or run the packaged application.
+- Enjoy seamless screen mirroring and control.
