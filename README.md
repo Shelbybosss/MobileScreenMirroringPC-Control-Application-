@@ -34,8 +34,8 @@ A powerful and easy-to-use screen mirroring and controlling application built wi
 
 1. **Clone the repository:**
 ```sh
-   git clone https://github.com/yourusername/yourrepository.git
-   cd yourrepository
+   git clone https://github.com/Shelbybosss/MobileScreenMirroringPC-Control-Application-.git
+   cd MobileScreenMirroringPC-Control-Application 
 ```
 2. **Install dependencies:**
 ```
